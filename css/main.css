@@ -15,6 +15,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 .list {
@@ -1087,8 +1088,8 @@ body {
 
 .botton-modal {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 10px;
+  right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1304,6 +1305,15 @@ body {
   background-color: var(--logo-color);
 }
 
+.project {
+  padding: 94px 0;
+}
+@media screen and (max-width: 1199px) {
+  .project {
+    padding: 60px 0;
+  }
+}
+
 .picture {
   display: block;
 }
@@ -1316,9 +1326,32 @@ body {
 
 .project-filter-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 50px;
-  justify-content: center;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .project-filter-list {
+    max-width: 400px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .project-filter-list {
+    margin-bottom: 30px;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project-filter-list {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 361px) and (max-width: 767px) {
+  .project-filter-item:nth-child(n+4) {
+    margin-top: 15px;
+  }
 }
 
 .project-list {
@@ -1331,10 +1364,20 @@ body {
 }
 
 .project-item {
-  flex-basis: calc(33.3333333333% - 30px);
+  width: 100%;
   margin-left: 30px;
   margin-top: 30px;
   background-color: var(--bgd-color);
+}
+@media screen and (min-width: 768px) {
+  .project-item {
+    flex-basis: calc(50% - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project-item {
+    flex-basis: calc(33.3333333333% - 30px);
+  }
 }
 
 .project-btn {

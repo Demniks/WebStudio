@@ -1,3 +1,9 @@
+.project {
+  padding: 94px 0;
+  @media screen and (max-width: 1199px) {
+    padding: 60px 0;
+  }
+}
 .picture {
   display: block;
 }
@@ -10,14 +16,36 @@
 
 .project-filter-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 50px;
-  justify-content: center;
+  margin-bottom: 40px;
+  @media screen and (max-width: 767px) {
+  max-width: 400px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    flex-wrap: nowrap;
+   justify-content: center;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+  // margin-bottom: 50px;
+  // justify-content: center;
+}
+
+.project-filter-item:nth-child(n + 4) {
+  @media screen and (min-width: 361px) and (max-width: 767px) {
+    margin-top: 15px;
+  }
 }
 
 .project-list {
   display: flex;
   flex-wrap: wrap;
+  // justify-content: center;
   padding: 0;
   margin: 0;
   margin-left: -30px;
@@ -25,10 +53,17 @@
 }
 
 .project-item {
-  flex-basis: calc(100% / 3 - 30px);
+  width: 100%;
+  // flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
   background-color: var(--bgd-color);
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 .project-btn {
